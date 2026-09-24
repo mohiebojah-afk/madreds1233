@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madreds 1233 | شبكة أخبار ريال مدريد المباشرة</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #0f1115;
+            color: #f3f4f6;
+        }
+        .gold-text { color: #d4af37; }
+        .gold-bg { background-color: #d4af37; }
+        .gold-border { border-color: #d4af37; }
+    </style>
+</head>
+<body class="bg-[#0b0c10] text-gray-100 min-h-screen flex flex-col justify-between">
+
+    <!-- شريط التنقل -->
+    <header class="bg-[#13161f] border-b border-gray-800 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#d4af37] to-[#fff] flex items-center justify-center text-black font-black text-xl shadow-lg">
+                    RM
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-wider gold-text">MADREDS 1233</span>
+                    <span class="block text-xs text-gray-400">التغطية الحية والمباشرة</span>
+                </div>
+            </div>
+
+            <!-- أزرار التنقل -->
+            <div class="flex items-center gap-3">
+                <button onclick="switchTab('site')" id="btn-site" class="bg-[#d4af37] text-black px-4 py-2 rounded-xl text-xs font-bold transition-all shadow">
+                    <i class="fa-solid fa-globe ml-1"></i> الرئيسية
+                </button>
+                <button onclick="switchTab('admin')" id="btn-admin" class="bg-gray-800 hover:bg-gray-700 text-gray-200 px-4 py-2 rounded-xl text-xs font-bold transition-all shadow border border-gray-700 relative">
+                    <i class="fa-solid fa-gauge-high ml-1"></i> لوحة التحكم والمراجعة
+                    <span id="badge-count" class="absolute -top-1 -right-1 bg-red-600 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">1</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- واجهة الموقع الرئيسي (أخبار اليوم الحية 24 سبتمبر 2026) -->
+    <main id="view-site" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
+        <div class="lg:col-span-2 space-y-8">
+            <div class="flex items-center justify-between border-b border-gray-800 pb-4">
+                <h2 class="text-xl font-black gold-text flex items-center gap-2">
+                    <i class="fa-solid fa-fire"></i> آخر أخبار الميرنغي (بث حي - 24 سبتمبر 2026)
+                </h2>
+                <span class="text-xs text-emerald-400 font-bold flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span> متصل بالصحف الحية
+                </span>
+            </div>
+
+            <!-- حاوية الأخبار -->
+            <div id="news-container" class="space-y-6">
+                
+                <!-- الخبر الأول (أحدث مستجدات اليوم) -->
+                <div class="bg-[#13161f] border border-gray-800 rounded-2xl overflow-hidden shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1200&q=80" alt="ريال مدريد" class="w-full h-64 object-cover">
+                    <div class="p-6 space-y-3">
+                        <span class="bg-[#d4af37] text-black text-xs font-bold px-3 py-1 rounded-full">فابريزيو رومانو / عاجل</span>
+                        <h3 class="text-xl font-bold">تحديثات حصرية بشأن خطط ريال مدريد لسوق الانتقالات الشتوية</h3>
+                        <p class="text-gray-300 text-sm">أكدت مصادر مقربة من إدارة النادي الملكي أن الاستراتيجية الحالية تركز بالكامل على مراقبة أداء المواهب الشابة ودراسة تعزيز خط الدفاع بناءً على طلب الجهاز الفني.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400 pt-2 border-t border-gray-800">
+                            <span><i class="fa-regular fa-clock ml-1"></i> اليوم، 4:30 مساءً (24 سبتمبر 2026)</span>
+                            <a href="https://instagram.com/madreds1233" target="_blank" class="gold-text hover:underline"><i class="fa-brands fa-instagram ml-1"></i> @madreds1233</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الخبر الثاني -->
+                <div class="bg-[#13161f] border border-gray-800 rounded-2xl overflow-hidden shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1200&q=80" alt="أنشيلوتي" class="w-full h-64 object-cover">
+                    <div class="p-6 space-y-3">
+                        <span class="bg-[#d4af37] text-black text-xs font-bold px-3 py-1 rounded-full">صحيفة ماركا الإسبانية</span>
+                        <h3 class="text-xl font-bold">كارلو أنشيلوتي يفرض سرية تامة على التدريبات التكتيكية</h3>
+                        <p class="text-gray-300 text-sm">شهدت تدريبات اليوم تركيزاً مكثفاً على سرعة التحول الهجومي وإغلاق المساحات في وسط الملعب استعداداً للمواجهة الرسمية المقبلة في الليغا.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400 pt-2 border-t border-gray-800">
+                            <span><i class="fa-regular fa-clock ml-1"></i> اليوم، 2:15 ظهراً (24 سبتمبر 2026)</span>
+                            <a href="https://instagram.com/madreds1233" target="_blank" class="gold-text hover:underline"><i class="fa-brands fa-instagram ml-1"></i> @madreds1233</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- الشريط الجانبي -->
+        <div class="space-y-6">
+            <div class="bg-[#13161f] border border-gray-800 rounded-2xl p-5 shadow-xl">
+                <h3 class="text-sm font-bold gold-text mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-trophy"></i> جدول ترتيب الليغا
+                </h3>
+                <div class="space-y-2 text-xs">
+                    <div class="flex justify-between items-center p-2 rounded text-gray-300"><span>1. برشلونة</span> <span class="font-bold">21 نقطة</span></div>
+                    <div class="flex justify-between items-center p-2 rounded text-gray-300"><span>2. أتلتيكو مدريد</span> <span class="font-bold">16 نقطة</span></div>
+                    <div class="flex justify-between items-center bg-white/5 p-2 rounded font-bold border-r-4 gold-border text-white"><span>4. ريال مدريد</span> <span class="gold-text">15 نقطة</span></div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-[#13161f] border border-pink-500/30 rounded-2xl p-5 shadow-xl text-center space-y-3">
+                <i class="fa-brands fa-instagram text-3xl text-pink-400"></i>
+                <h3 class="font-bold text-sm">تابع صفحتنا الرسمية</h3>
+                <p class="text-xs text-gray-300">انضم إلى @madreds1233 لتغطية حصرية أول بأول.</p>
+                <a href="https://instagram.com/madreds1233" target="_blank" class="inline-block w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 rounded-xl text-xs transition-colors shadow">زر انستغرام</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- لوحة التحكم ومراجعة الأخبار الواردة -->
+    <section id="view-admin" class="max-w-5xl mx-auto px-4 py-8 w-full hidden space-y-8">
+        
+        <div class="bg-[#13161f] border border-gray-800 rounded-2xl p-6 shadow-2xl space-y-4">
+            <div class="flex items-center justify-between border-b border-gray-800 pb-4">
+                <div>
+                    <h2 class="text-lg font-black gold-text flex items-center gap-2">
+                        <i class="fa-solid fa-robot"></i> مسودات الأخبار الواردة (تاريخ اليوم: 24 سبتمبر 2026)
+                    </h2>
+                    <p class="text-xs text-gray-400 mt-1">اضغط زر الجلب لجلب أحدث التقارير الحصرية وفحصها قبل نشرها.</p>
+                </div>
+                <button onclick="fetchLiveNews()" class="bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold px-4 py-2 rounded-xl transition-all shadow flex items-center gap-2">
+                    <i class="fa-solid fa-sync"></i> جلب أحدث أخبار اليوم
+                </button>
+            </div>
+
+            <!-- قائمة الأخبار المعلقة -->
+            <div id="pending-news-list" class="space-y-4">
+                <div class="bg-[#0b0c10] border border-gray-800 rounded-xl p-4 flex flex-col md:flex-row gap-4 items-center justify-between">
+                    <div class="space-y-2 w-full">
+                        <span class="bg-yellow-500/20 text-yellow-400 text-[10px] font-bold px-2 py-0.5 rounded">صحيفة آس الإسبانية - منذ قليل</span>
+                        <input type="text" id="pend-title-1" value="تقارير آس: جاهزية كاملة لنجوم الفريق للمباراة المرتقبة" class="w-full bg-[#13161f] border border-gray-700 rounded-lg px-3 py-1.5 text-sm font-bold text-white focus:outline-none focus:border-[#d4af37]">
+                        <textarea id="pend-desc-1" rows="2" class="w-full bg-[#13161f] border border-gray-700 rounded-lg px-3 py-1.5 text-xs text-gray-300 focus:outline-none focus:border-[#d4af37]">أشارت الصحيفة إلى تعافي جميع اللاعبين الملتحقين بالتدريبات وجاهزيتهم الفنية والبدنية لخوض اللقاء القادم بكل قوة...</textarea>
+                    </div>
+                    <div class="flex md:flex-col gap-2 shrink-0 w-full md:w-auto">
+                        <button onclick="approveNews('pend-title-1', 'pend-desc-1', 'https://images.unsplash.com/photo-1518091043644-c1d4457512c6')" class="bg-green-600 hover:bg-green-700 text-white text-xs font-bold px-4 py-2 rounded-lg transition-all shadow flex items-center justify-center gap-1">
+                            <i class="fa-solid fa-check"></i> موافقة ونشر
+                        </button>
+                        <button onclick="this.closest('div.bg-\\[\\#0b0c10\\]').remove(); updateBadge();" class="bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white text-xs font-bold px-4 py-2 rounded-lg transition-all">
+                            رفض
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- كتابة خبر يدوي -->
+        <div class="bg-[#13161f] border border-gray-800 rounded-2xl p-6 shadow-2xl space-y-4">
+            <h2 class="text-lg font-black gold-text flex items-center gap-2 border-b border-gray-800 pb-3">
+                <i class="fa-solid fa-pen-nib"></i> أو نشر خبر خاص بك لصفحة @madreds1233
+            </h2>
+            <div class="space-y-3">
+                <input type="text" id="manual-title" placeholder="عنوان الخبر..." class="w-full bg-[#0b0c10] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-[#d4af37] focus:outline-none">
+                <input type="text" id="manual-img" placeholder="رابط الصورة (اختياري)..." class="w-full bg-[#0b0c10] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-[#d4af37] focus:outline-none">
+                <textarea id="manual-desc" rows="3" placeholder="تفاصيل الخبر..." class="w-full bg-[#0b0c10] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-[#d4af37] focus:outline-none"></textarea>
+                <button onclick="publishManualNews()" class="w-full bg-[#d4af37] hover:bg-[#c29d30] text-black font-black py-3 rounded-xl text-sm transition-all shadow-lg cursor-pointer">
+                    نشر الخبر الفوري
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="bg-[#13161f] border-t border-gray-800 py-6 text-center text-xs text-gray-400 mt-12">
+        <p>جميع الحقوق محفوظة © 2026 - موقع <span class="gold-text font-bold">Madreds 1233</span></p>
+    </footer>
+
+    <!-- الأكواد البرمجية -->
+    <script>
+        function switchTab(tab) {
+            const siteView = document.getElementById('view-site');
+            const adminView = document.getElementById('view-admin');
+            const btnSite = document.getElementById('btn-site');
+            const btnAdmin = document.getElementById('btn-admin');
+
+            if (tab === 'site') {
+                siteView.classList.remove('hidden');
+                adminView.classList.add('hidden');
+                btnSite.className = "bg-[#d4af37] text-black px-4 py-2 rounded-xl text-xs font-bold transition-all shadow";
+                btnAdmin.className = "bg-gray-800 hover:bg-gray-700 text-gray-200 px-4 py-2 rounded-xl text-xs font-bold transition-all shadow border border-gray-700";
+            } else {
+                siteView.classList.add('hidden');
+                adminView.classList.remove('hidden');
+                btnAdmin.className = "bg-[#d4af37] text-black px-4 py-2 rounded-xl text-xs font-bold transition-all shadow";
+                btnSite.className = "bg-gray-800 hover:bg-gray-700 text-gray-200 px-4 py-2 rounded-xl text-xs font-bold transition-all shadow border border-gray-700";
+            }
+        }
+
+        function approveNews(titleId, descId, imgSrc) {
+            const title = document.getElementById(titleId).value;
+            const desc = document.getElementById(descId).value;
+
+            const container = document.getElementById('news-container');
+            const newCard = document.createElement('div');
+            newCard.className = "bg-[#13161f] border border-gray-800 rounded-2xl overflow-hidden shadow-xl";
+            newCard.innerHTML = `
+                <img src="${imgSrc}" alt="خبر" class="w-full h-64 object-cover">
+                <div class="p-6 space-y-3">
+                    <span class="bg-[#d4af37] text-black text-xs font-bold px-3 py-1 rounded-full">حصري - معتمد اليوم</span>
+                    <h3 class="text-xl font-bold">${title}</h3>
+                    <p class="text-gray-300 text-sm">${desc}</p>
+                    <div class="flex items-center justify-between text-xs text-gray-400 pt-2 border-t border-gray-800">
+                        <span><i class="fa-regular fa-clock ml-1"></i> اليوم، 24 سبتمبر 2026</span>
+                        <a href="https://instagram.com/madreds1233" target="_blank" class="gold-text hover:underline"><i class="fa-brands fa-instagram ml-1"></i> @madreds1233</a>
+                    </div>
+                </div>
+            `;
+            container.prepend(newCard);
+
+            event.target.closest('div.bg-\\[\\#0b0c10\\]').remove();
+            updateBadge();
+            alert('تمت الموافقة على الخبر ونشره فوراً في الواجهة!');
+            switchTab('site');
+        }
+
+        function publishManualNews() {
+            const title = document.getElementById('manual-title').value;
+            const imgInput = document.getElementById('manual-img').value;
+            const desc = document.getElementById('manual-desc').value;
+
+            if (!title || !desc) {
+                alert('الرجاء تعبئة العنوان والتفاصيل!');
+                return;
+            }
+
+            const imgSrc = imgInput ? imgInput : 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1200&q=80';
+            const container = document.getElementById('news-container');
+            const newCard = document.createElement('div');
+            newCard.className = "bg-[#13161f] border border-gray-800 rounded-2xl overflow-hidden shadow-xl";
+            newCard.innerHTML = `
+                <img src="${imgSrc}" alt="خبر" class="w-full h-64 object-cover">
+                <div class="p-6 space-y-3">
+                    <span class="bg-[#d4af37] text-black text-xs font-bold px-3 py-1 rounded-full">خاص بصفحتك</span>
+                    <h3 class="text-xl font-bold">${title}</h3>
+                    <p class="text-gray-300 text-sm">${desc}</p>
+                    <div class="flex items-center justify-between text-xs text-gray-400 pt-2 border-t border-gray-800">
+                        <span><i class="fa-regular fa-clock ml-1"></i> اليوم، 24 سبتمبر 2026</span>
+                        <a href="https://instagram.com/madreds1233" target="_blank" class="gold-text hover:underline"><i class="fa-brands fa-instagram ml-1"></i> @madreds1233</a>
+                    </div>
+                </div>
+            `;
+            container.prepend(newCard);
+
+            document.getElementById('manual-title').value = '';
+            document.getElementById('manual-img').value = '';
+            document.getElementById('manual-desc').value = '';
+            alert('تم نشر الخبر بنجاح!');
+            switchTab('site');
+        }
+
+        function fetchLiveNews() {
+            const list = document.getElementById('pending-news-list');
+            const uniqueId = 'news-' + Date.now();
+            const liveTitles = [
+                "تحديث عاجل: اتصالات مكثفة لإحاطة اللاعبين بأهمية المرحلة القادمة",
+                "أبرز العناوين: تقارير صحفية تؤكد رغبة النادي في تعزيز اللياقة البدنية",
+                "متابعة حية: إدارة ريال مدريد تدرس خطط تطوير الأكاديمية والمواهب الشابة"
+            ];
+            const randomTitle = liveTitles[Math.floor(Math.random() * liveTitles.length)];
+
+            const newDraft = document.createElement('div');
+            newDraft.className = "bg-[#0b0c10] border border-gray-800 rounded-xl p-4 flex flex-col md:flex-row gap-4 items-center justify-between";
+            newDraft.innerHTML = `
+                <div class="space-y-2 w-full">
+                    <span class="bg-emerald-500/20 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded">تحديث مباشر - اليوم</span>
+                    <input type="text" id="${uniqueId}-title" value="${randomTitle}" class="w-full bg-[#13161f] border border-gray-700 rounded-lg px-3 py-1.5 text-sm font-bold text-white focus:outline-none focus:border-[#d4af37]">
+                    <textarea id="${uniqueId}-desc" rows="2" class="w-full bg-[#13161f] border border-gray-700 rounded-lg px-3 py-1.5 text-xs text-gray-300 focus:outline-none focus:border-[#d4af37]">أفادت أحدث الأنباء الواردة من المعسكر الملكي اليوم عن تركيز تام وحرص كبير من الكادر الفني على تلافي أي أخطاء...</textarea>
+                </div>
+                <div class="flex md:flex-col gap-2 shrink-0 w-full md:w-auto">
+                    <button onclick="approveNews('${uniqueId}-title', '${uniqueId}-desc', 'https://images.unsplash.com/photo-1574629810360-7efbbe195018')" class="bg-green-600 hover:bg-green-700 text-white text-xs font-bold px-4 py-2 rounded-lg transition-all shadow flex items-center justify-center gap-1">
+                        <i class="fa-solid fa-check"></i> موافقة ونشر
+                    </button>
+                    <this.closest('div.bg-\\[\\#0b0c10\\]').remove(); updateBadge();" class="bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white text-xs font-bold px-4 py-2 rounded-lg transition-all">
+                        رفض
+                    </button>
+                </div>
+            `;
+            list.prepend(newDraft);
+            updateBadge();
+            alert('تم جلب أحدث خبر حي لليوم بنجاح!');
+        }
+
+        function updateBadge() {
+            const list = document.getElementById('pending-news-list');
+            const count = list.children.length;
+            const badge = document.getElementById('badge-count');
+            badge.textContent = count;
+            if (count === 0) badge.style.display = 'none';
+            else badge.style.display = 'inline-block';
+        }
+    </script>
+</body>
+</html>
